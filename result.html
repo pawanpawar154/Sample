@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+ <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+
+
+    <div class="sidebar-content">
+        <h2 class="logo">🩺 MediReport</h2>
+        <hr>
+
+        <!-- Username -->
+        <p class="username">{{ session['user'] }}</p>
+
+        <!-- Menu -->
+        <a href="/home">🏠 Dashboard</a>
+        <a href="/history">📜 History</a>
+        <a href="/profile">👤 Profile</a>
+        <a href="/logout">🚪 Logout</a>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div id="content" class="main">
+    <h2 class="text-white">🧾 Report Analysis</h2>
+
+    <div class="card">
+        <h3>Summary</h3>
+        <ul>
+            {% for r in result %}
+                <li class="
+                    {% if 'LOW' in r %}low
+                    {% elif 'HIGH' in r %}high
+                    {% else %}normal
+                    {% endif %}
+                ">
+                    {{ r }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Explanation</h3>
+        <ul>
+            {% for e in explanation %}
+                <li>{{ e }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <a href="/home"><button>⬅ Back to Dashboard</button></a>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("content").classList.toggle("shift");
+}
+</script>

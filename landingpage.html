@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediReport - Health Report Simplifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<div class="landing">
+
+    <h1>Understand Your Lab Reports</h1>
+
+    <p class="tagline">
+        Get clear, understandable explanations of your medical results easily with smart analysis in seconds
+    </p>
+
+    <a href="{{ url_for('login') }}">
+    <button class="cta-btn">Get Started</button>
+</a>
+
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+
+    <h2>✨ Powerful Features for Better Health</h2>
+
+    <div class="feature-box">
+        <div>📄 Upload Reports</div>
+        <div>⚡ Instant Analysis</div>
+        <div>📊 Easy Results</div>
+        <div>🧾 History Tracking</div>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+
+    <h2>🩺 About MediReport</h2>
+
+    <p>
+        <b>MediReport</b> is a smart health report simplifier designed to help you easily 
+        understand complex medical reports without confusion.
+    </p>
+
+    <p>
+        Many people struggle to interpret lab values like <span>blood sugar</span>, 
+        <span>cholesterol</span>, or <span>hemoglobin levels</span>.
+    </p>
+
+    <p>
+        Our system analyzes your report and clearly shows whether values are 
+        <b class="low">Low</b>, 
+        <b class="normal">Normal</b>, or 
+        <b class="high">High</b>, along with simple explanations.
+    </p>
+
+    <p class="highlight">
+        ✔ No medical knowledge needed — understand your health in seconds!
+    </p>
+
+</div>
+
+    
+    <h2 class="title">How It Works</h2>
+
+<div class="steps">
+
+    <div class="step">
+        <div class="number">1</div>
+        <h3>Upload File</h3>
+        <p>Upload a file of your lab report </p>
+    </div>
+
+    <div class="step">
+        <div class="number">2</div>
+        <h3>Instant Analysis</h3>
+        <p>Our MediReport processes and analyzes your medical data</p>
+    </div>
+
+    <div class="step">
+        <div class="number">3</div>
+        <h3>Clear Explanation</h3>
+        <p>Get easy-to-understand results and recommendations</p>
+    </div>
+
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+
+    <h2>🚀 Start Your Health Analysis Today</h2>
+
+    <a href="{{ url_for('login') }}">
+    <button class="cta-btn">Get Started</button>
+</a>
+</div>
+
+</body>
+</html>

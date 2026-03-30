@@ -1,0 +1,180 @@
+/* ===== LANDING BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+     background: linear-gradient(135deg, #e6f9f0, #f0fff7, #d9f7ec);
+    color: black;
+}
+
+/* ===== HERO ===== */
+.landing {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.landing h2 {
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.tagline {
+    max-width: 500px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* ===== BUTTON ===== */
+.cta-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background: linear-gradient(to bottom, #4b2cff, #6a11cb);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ddd;
+}
+
+/* ===== FEATURES ===== */
+.features {
+    background: white;
+    color: black;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.feature-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 per row */
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+
+}
+.feature-box div {
+    background:  #f4f6f9;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+/* ===== ABOUT ===== */
+.about {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.about p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about span {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Highlight health status */
+.low {
+    color: orange;
+}
+
+.normal {
+    color: #2ecc71;
+}
+
+.high {
+    color: #e74c3c;
+}
+
+.highlight {
+    margin-top: 20px;
+    background: #eafaf1;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background: rgb(33, 53, 54);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: #f4f6f9;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2ecc71; /* light green */
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    margin: 10px 0;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+}

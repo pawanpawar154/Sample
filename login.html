@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MediReport Login</title>
+    <style>
+        /* Full-page background image */
+        .bg-image {
+            position: fixed; /* stay in place */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* scale image */
+            z-index: -1; /* behind content */
+        }
+
+        /* Flex container to center login box */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center;     /* vertical center */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Login box */
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .login-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        /* Input fields */
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            width: 90%; /* a bit smaller than box width */
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            outline: none;
+            margin-bottom: 15px;
+            box-sizing: border-box; /* includes padding in width */
+        }
+
+        .login-box input[type="password"] {
+            margin-bottom: 20px;
+        }
+
+        .login-box button {
+            width: 90%;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .error-box {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .signup {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .signup a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background image -->
+    <img src="/static/img.jpg" class="bg-image">
+
+    <!-- Login box -->
+    <div class="login-box">
+
+        <!-- Title -->
+        <h3>🩺 MediReport</h3>
+        <p>Login to continue</p>
+
+        <!-- Error -->
+        {% if error %}
+        <div class="error-box">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Form -->
+        <form method="POST" action="/login">
+            <input type="email" name="email" placeholder="👤 Email" required autocomplete="email">
+            <input type="password" name="password" placeholder="🔒 Password" required autocomplete="current-password">
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Signup -->
+        <p class="signup">
+            New user? <a href="/signup">Sign up</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
